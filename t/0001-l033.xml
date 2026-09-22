@@ -30,6 +30,15 @@
       <t id="126">Géré par les ensembles d'extensions. Appuie sur Modifier pour changer l'état des extensions.</t>
       <t id="127">L'ensemble par défaut partage les sauvegardes communes et ne peut pas avoir les siennes.</t>
 
+      <!-- Page des paramètres (130) -->
+      <t id="130">Ouvrir les paramètres de cette extension.</t>
+      <t id="131">Mode de débogage</t>
+      <t id="132">Débogage</t>
+      <t id="133">Trace</t>
+      <t id="134">Quantité d'informations écrites dans le journal du jeu. N'utilisez Débogage ou Trace que pour le dépannage.</t>
+      <t id="135">Stockage</t>
+      <t id="136">Préfixe des sauvegardes</t>
+
       <!-- Messages (1000) -->
       <t id="1000">Ensemble actif : %s</t>
       <t id="1001">Aucun</t>

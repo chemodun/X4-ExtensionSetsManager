@@ -78,6 +78,7 @@ local VANILLA_BACK_ARROW = "table_arrow_inv_left"
 local VANILLA_BACK_ARROW_OFFSET_X = 3
 -- menu.currentOption while the mod's own dialog is up: any value vanilla does not know.
 local CHOICE_OPTION = "esm_choice"
+local SETTINGS_OPTION = "esm_settings"
 
 -- A label that matches the vanilla rows below it; the title is bold and one step larger.
 local function createRowText(cell, text, bold)
@@ -130,19 +131,19 @@ local function showExtensionsPage()
   end
 end
 
--- Vanilla's question dialog (gameoptions.lua:12716) answers yes or no. This is the same frame
--- with a row per answer, for a question that has three. currentOption is the mod's own, so a
--- row select falls past vanilla's chain to its generic "rowdata carries a callback" branch
--- (gameoptions.lua:13574); userQuestion is still set, because that is what puts the question in
--- the header and what sends the back arrow and Escape to negCallback instead of popping the
--- history one page too far.
-local function displayChoice(question, answers, onBack)
+-- A page of the mod's own, built as vanilla's question dialog (gameoptions.lua:12716): the
+-- header carries the title and a back arrow, the rows are the caller's. currentOption is the
+-- mod's own, so a row select falls past vanilla's chain to its generic "rowdata carries a
+-- callback" branch (gameoptions.lua:13574); userQuestion is still set, because that is what
+-- puts the title in the header and what sends the back arrow and Escape to negCallback instead
+-- of popping the history one page too far.
+local function ownPage(option, title, onBack)
   Helper.clearDataForRefresh(optionsMenu, VANILLA_OPTIONS_LAYER)
   optionsMenu.selectedOption = nil
   ---@diagnostic disable-next-line: assign-type-mismatch
-  optionsMenu.currentOption = CHOICE_OPTION
+  optionsMenu.currentOption = option
   ---@diagnostic disable-next-line: assign-type-mismatch
-  optionsMenu.userQuestion = { question = question, negCallback = onBack }
+  optionsMenu.userQuestion = { question = title, negCallback = onBack }
 
   local frame = optionsMenu.createOptionsFrame()
   local ftable = frame:addTable(7, {
@@ -168,12 +169,70 @@ local function displayChoice(question, answers, onBack)
     titleColor = Color["row_title"],
   })
 
+  return frame, ftable
+end
+
+-- Vanilla's question dialog answers yes or no; this is the same frame with a row per answer,
+-- for a question that has three.
+local function displayChoice(question, answers, onBack)
+  local frame, ftable = ownPage(CHOICE_OPTION, question, onBack)
+
   for _, answer in ipairs(answers) do
     local row = ftable:addRow({ callback = answer.callback }, {})
     createRowText(row[2]:setColSpan(6), answer.text)
   end
 
   esm.Trace("choice: %d answer(s) offered", #answers)
+  frame:display()
+end
+
+-- Log verbosity, in the order the dropdown offers it.
+local DEBUG_LEVELS = {
+  { id = "none", textid = 1001 },
+  { id = "debug", textid = 132 },
+  { id = "trace", textid = 133 },
+}
+
+-- The mod has no Options page - none of that machinery runs in the main menu - so its own
+-- settings sit behind the "..." button of its title row, where vanilla puts an extension's.
+local function displaySettings()
+  local frame, ftable = ownPage(SETTINGS_OPTION,
+    T(1) .. " - " .. ReadText(1001, 2679), showExtensionsPage)
+
+  local options = {}
+  for _, level in ipairs(DEBUG_LEVELS) do
+    options[#options + 1] = { id = level.id, text = T(level.textid), icon = "", displayremoveoption = false }
+  end
+
+  local levelRow = ftable:addRow(true, {})
+  createRowText(levelRow[2]:setColSpan(3), T(131))
+  levelRow[5]:setColSpan(2):createDropDown(options, {
+    startOption = esm.debugLevel,
+    mouseOverText = T(134),
+  })
+  levelRow[5].handlers.onDropDownConfirmed = function(_, id)
+    esm.SetDebugLevel(nil, id)
+    displaySettings()
+  end
+
+  -- What the store and the save redirection are actually doing right now: the numbers a log
+  -- read would otherwise have to be opened for.
+  local active = esm.FindSet(esm.ActiveSetId())
+  local prefix = (active and active.saves) and (esm.SaveTag(active.id) .. "_") or T(1001)
+  local info = {
+    { T(135), esm.Backend() },
+    { T(120), tostring(#esm.Sets()) },
+    { T(136), prefix },
+    { T(1005), ReadText(1001, sets.RestartPending() and 2617 or 2618) },
+  }
+  for _, line in ipairs(info) do
+    local row = ftable:addRow(false, {})
+    createRowText(row[2]:setColSpan(3), line[1])
+    createRowText(row[5]:setColSpan(2), line[2])
+  end
+
+  esm.Trace("settings page: level=%s backend=%s prefix=%s",
+    tostring(esm.debugLevel), tostring(esm.Backend()), tostring(prefix))
   frame:display()
 end
 
@@ -226,6 +285,13 @@ local function onOwnPage()
   end
   local option = optionsMenu.currentOption
   return (option == "extensions") or (option == "extensionsettings")
+end
+
+-- The mod's own frames: the choice dialog and the settings page. Neither is a vanilla option,
+-- so both leave through their own negCallback rather than vanilla's history.
+local function onOwnFrame()
+  local option = optionsMenu and optionsMenu.currentOption
+  return (option == CHOICE_OPTION) or (option == SETTINGS_OPTION)
 end
 
 local function exitDeviation()
@@ -563,6 +629,14 @@ local function onToggleEnabled()
   showExtensionsPage()
 end
 
+-- The same separator vanilla puts between its own blocks (gameoptions.lua:10401), so the mod's
+-- rows read as one more block of the page.
+local function addSeparatorRow(ftable)
+  local row = ftable:addRow(false, {})
+  row[2]:setColSpan(6):createText(" ",
+    { fontsize = 1, height = Helper.borderSize, cellBGColor = Color["row_separator"] })
+end
+
 local function addButton(row, column, textid, active, handler)
   row[column]:createButton({ active = active }):setText(ReadText(1001, textid), { halign = "center" })
   row[column].handlers.onClick = handler
@@ -593,6 +667,15 @@ local function buildSetTable(frame, properties)
   createRowText(titleRow[2]:setColSpan(4), T(1), true)
   createCenteredCheckBox(titleRow[6], esm.Enabled(), { mouseOverText = T(125) })
   titleRow[6].handlers.onClick = onToggleEnabled
+  -- Column 7 is where every extension row keeps its "..." (gameoptions.lua:10467), so the mod's
+  -- own settings are reached the same way. It stays available with the feature off.
+  titleRow[7]:createButton({ mouseOverText = T(130) }):setText("...",
+    { fontsize = VANILLA_FONT_SIZE, halign = "center" })
+  titleRow[7].handlers.onClick = displaySettings
+  -- The title closes with a line of its own, so the caption reads as a heading over the rows
+  -- under it rather than as the first of them. It is drawn with the feature off as well, where
+  -- it is the only thing between the mod's row and vanilla's list.
+  addSeparatorRow(ftable)
 
   -- Off means off: the page is vanilla's again apart from this one row.
   if not esm.Enabled() then
@@ -705,11 +788,7 @@ local function buildSetTable(frame, properties)
     addButton(buttonRow, 6, 8529, set ~= nil, onEdit)
   end
 
-  -- The block closes with the same separator vanilla puts between its own blocks below
-  -- (gameoptions.lua:10401), so the mod's rows read as one more block of the page.
-  local separatorRow = ftable:addRow(false, {})
-  separatorRow[2]:setColSpan(6):createText(" ",
-    { fontsize = 1, height = Helper.borderSize, cellBGColor = Color["row_separator"] })
+  addSeparatorRow(ftable)
 
   return ftable:getVisibleHeight()
 end
@@ -789,12 +868,12 @@ function page.EnsureHooked()
     -- the options menu cannot be opened again. Drop the mod's own question and let vanilla
     -- close - the cleanup patch still re-applies the active set on the way out.
     if extra then
-      if optionsMenu.currentOption == CHOICE_OPTION then
+      if onOwnFrame() then
         optionsMenu.userQuestion = nil
       end
       return origOnCloseElement(dueToClose, layer, extra)
     end
-    if optionsMenu.currentOption == CHOICE_OPTION then
+    if onOwnFrame() then
       local question = optionsMenu.userQuestion
       if question and question.negCallback then
         question.negCallback()

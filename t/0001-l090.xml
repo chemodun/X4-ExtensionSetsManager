@@ -30,6 +30,15 @@
       <t id="126">Eklenti Kümeleri tarafından yönetiliyor. Eklenti durumlarını değiştirmek için bir kümede Düzenle'ye bas.</t>
       <t id="127">Varsayılan küme ortak kayıtları kullanır ve kendi kayıtlarını tutamaz.</t>
 
+      <!-- Ayarlar sayfası (130) -->
+      <t id="130">Bu eklentinin ayarlarını aç.</t>
+      <t id="131">Hata ayıklama modu</t>
+      <t id="132">Hata ayıklama</t>
+      <t id="133">İzleme</t>
+      <t id="134">Bu eklentinin oyun günlüğüne ne kadar yazdığı. Hata ayıklama veya İzleme'yi yalnızca sorun ararken kullan.</t>
+      <t id="135">Depo</t>
+      <t id="136">Kayıt dosyası ön eki</t>
+
       <!-- Messages (1000) -->
       <t id="1000">Etkin küme: %s</t>
       <t id="1001">Yok</t>

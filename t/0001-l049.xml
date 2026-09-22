@@ -30,6 +30,15 @@
       <t id="126">Wird von Erweiterungssätzen verwaltet. Drücke bei einem Satz auf Bearbeiten, um den Zustand der Erweiterungen zu ändern.</t>
       <t id="127">Der Standardsatz nutzt die gemeinsamen Spielstände und kann keine eigenen haben.</t>
 
+      <!-- Einstellungsseite (130) -->
+      <t id="130">Die Einstellungen dieser Erweiterung öffnen.</t>
+      <t id="131">Debug-Modus</t>
+      <t id="132">Debug</t>
+      <t id="133">Trace</t>
+      <t id="134">Wie viel diese Erweiterung ins Spielprotokoll schreibt. Debug oder Trace nur zur Fehlersuche verwenden.</t>
+      <t id="135">Speicher</t>
+      <t id="136">Präfix der Spielstände</t>
+
       <!-- Messages (1000) -->
       <t id="1000">Aktiver Satz: %s</t>
       <t id="1001">Keiner</t>

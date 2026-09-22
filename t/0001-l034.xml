@@ -30,6 +30,15 @@
       <t id="126">Gestionado por Conjuntos de extensiones. Pulsa Editar en un conjunto para cambiar el estado de las extensiones.</t>
       <t id="127">El conjunto predeterminado comparte las partidas guardadas comunes y no puede tener las suyas.</t>
 
+      <!-- Página de ajustes (130) -->
+      <t id="130">Abrir los ajustes de esta extensión.</t>
+      <t id="131">Modo de depuración</t>
+      <t id="132">Depuración</t>
+      <t id="133">Traza</t>
+      <t id="134">Cuánto escribe esta extensión en el registro del juego. Usa Depuración o Traza solo para solucionar problemas.</t>
+      <t id="135">Almacenamiento</t>
+      <t id="136">Prefijo de partidas guardadas</t>
+
       <!-- Messages (1000) -->
       <t id="1000">Conjunto activo: %s</t>
       <t id="1001">Ninguno</t>

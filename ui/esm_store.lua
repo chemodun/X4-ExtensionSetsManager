@@ -508,6 +508,11 @@ function esm.SetActiveSetId(id)
   esm.Save()
 end
 
+-- Which store the sets are read from and written to, for the settings page.
+function esm.Backend()
+  return USE_USERDATA and "userdata.xml" or SAVED_NAME
+end
+
 -- The set id as it appears in a savegame filename: zero padded to 5 characters.
 function esm.SaveTag(id)
   return string.format("%05d", tonumber(id) or 0)

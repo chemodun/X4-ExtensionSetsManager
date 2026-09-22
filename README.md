@@ -68,13 +68,20 @@ Press **Edit** on the set, then **Delete**. The extensions themselves are not to
 
 The **Default** set cannot be deleted.
 
+### Settings of the mod itself
+
+The title row of the mod's block carries a **...** button, in the same column where every extension row keeps its own. It opens the mod's settings page, and the back arrow returns to the extension list. The page is reachable whether the feature is switched on or off.
+
+- **Debug mode**: how much the mod writes to the game log. **None** is the normal setting and still reports errors; **Debug** adds what the mod does on every action; **Trace** adds every store read and write, every button and every page build. Use the last two only while troubleshooting, then set it back.
+- Under it, for reference: the store the sets are kept in, how many sets are saved, the savegame prefix the active set writes, and whether a restart is already pending.
+
 ## Limitations
 
 - **A set only takes effect after a restart.** There is no way to reload extensions in a running X4, so applying a set always means exiting and starting the game again.
 - **This mod and the extensions it needs are always kept enabled** in every set. A set that switched the manager off could not be switched away from.
 - **Individual savegames cover manual saves only.** `quicksave`, the autosaves and online saves are written by the engine under names no script sees, so they stay shared.
 - **A set's saves are hidden while another set is active**, in the start menu as well as in game. That is the point of the feature, but it is the first thing that looks like a bug: if a save seems to be missing, check which set is active.
-- **The per-extension page** reached through the "..." button still shows its Enabled row as clickable while the feature is on. The click does nothing; use Edit on a set to change extension states.
+- **The per-extension page** reached through the "..." button of an extension row still shows its Enabled row as clickable while the feature is on. The click does nothing; use Edit on a set to change extension states.
 - **One package covers both game versions.** The mod patches the options menu at runtime rather than replacing any game file, so 8.00 and 9.00 are served by the same build.
 - **Set ids stop at 99999**, which is also the number of sets that can ever have existed in one installation, since an id is never reused.
 
