@@ -91,15 +91,22 @@ local function createRowText(cell, text, bold)
   return cell
 end
 
--- A checkbox has no halign, so a square one is centred by its own x offset, in the pre-scaled
--- units scaling = false pairs with. getColSpanWidth only answers once addRow has finalised the
--- column widths, which it does on the row this cell belongs to.
-local function createCenteredCheckBox(cell, checked, properties)
+-- Without a fixed square size a checkbox stretches to its cell. The size is pre-scaled, so it
+-- pairs with scaling = false.
+local function createFixedCheckBox(cell, checked, properties)
   local size = Helper.scaleX(Helper.standardButtonHeight)
   properties.width = size
   properties.height = size
   properties.scaling = false
   cell:createCheckBox(checked, properties)
+  return size
+end
+
+-- A checkbox has no halign, so a square one is centred by its own x offset. getColSpanWidth
+-- only answers once addRow has finalised the column widths, which it does on the row this cell
+-- belongs to.
+local function createCenteredCheckBox(cell, checked, properties)
+  local size = createFixedCheckBox(cell, checked, properties)
   cell.properties.x = math.max(0, math.floor((cell:getColSpanWidth() - size) / 2))
   return cell
 end
@@ -186,6 +193,9 @@ local function displayChoice(question, answers, onBack)
   frame:display()
 end
 
+-- Defined further down, where the page state it hands back is in scope.
+local onToggleEnabled
+
 -- Log verbosity, in the order the dropdown offers it.
 local DEBUG_LEVELS = {
   { id = "none", textid = 1001 },
@@ -198,6 +208,13 @@ local DEBUG_LEVELS = {
 local function displaySettings()
   local frame, ftable = ownPage(SETTINGS_OPTION,
     T(1) .. " - " .. ReadText(1001, 2679), showExtensionsPage)
+
+  -- The master switch. It sits here rather than on the Extensions page so that the mod's block
+  -- there is a heading and its rows, with nothing of the mod's own settings mixed into them.
+  local enabledRow = ftable:addRow(true, {})
+  createRowText(enabledRow[2]:setColSpan(3), ReadText(1001, 4825))
+  createFixedCheckBox(enabledRow[5]:setColSpan(2), esm.Enabled(), { mouseOverText = T(125) })
+  enabledRow[5].handlers.onClick = onToggleEnabled
 
   local options = {}
   for _, level in ipairs(DEBUG_LEVELS) do
@@ -215,10 +232,13 @@ local function displaySettings()
     displaySettings()
   end
 
+  -- Same test esm_saves.activeSet makes: with the master switch off nothing is redirected, so
+  -- the page has to read None however the active set is flagged.
+  local active = esm.Enabled() and esm.FindSet(esm.ActiveSetId()) or nil
+  local prefix = (active and active.saves) and (esm.SaveTag(active.id) .. "_") or T(1001)
+
   -- What the store and the save redirection are actually doing right now: the numbers a log
   -- read would otherwise have to be opened for.
-  local active = esm.FindSet(esm.ActiveSetId())
-  local prefix = (active and active.saves) and (esm.SaveTag(active.id) .. "_") or T(1001)
   local info = {
     { T(135), esm.Backend() },
     { T(120), tostring(#esm.Sets()) },
@@ -231,8 +251,8 @@ local function displaySettings()
     createRowText(row[5]:setColSpan(2), line[2])
   end
 
-  esm.Trace("settings page: level=%s backend=%s prefix=%s",
-    tostring(esm.debugLevel), tostring(esm.Backend()), tostring(prefix))
+  esm.Trace("settings page: enabled=%s level=%s backend=%s prefix=%s",
+    tostring(esm.Enabled()), tostring(esm.debugLevel), tostring(esm.Backend()), tostring(prefix))
   frame:display()
 end
 
@@ -612,10 +632,11 @@ local function onDelete()
   end, showExtensionsPage)
 end
 
--- The master switch. It changes nothing that is stored and nothing that is applied: switching
--- off only stops the mod acting - no savegame namespace, no marking, no lock on the vanilla
--- list - and every set, the active-set record and the per-set savegames stay where they are.
-local function onToggleEnabled()
+-- The master switch, driven from the mod's own settings page. It changes nothing that is stored
+-- and nothing that is applied: switching off only stops the mod acting - no savegame namespace,
+-- no marking, no lock on the vanilla list - and every set, the active-set record and the per-set
+-- savegames stay where they are.
+function onToggleEnabled()
   local enabled = not esm.Enabled()
   esm.SetEnabled(enabled)
   if not enabled then
@@ -626,7 +647,9 @@ local function onToggleEnabled()
   end
   refreshVanillaCaches()
   saves.Sync()
-  showExtensionsPage()
+  -- The switch is on the settings page, so that is where the player stays; the Extensions page
+  -- is rebuilt from the new state when the back arrow returns to it.
+  displaySettings()
 end
 
 -- The same separator vanilla puts between its own blocks (gameoptions.lua:10401), so the mod's
@@ -661,14 +684,13 @@ local function buildSetTable(frame, properties)
   ftable:setColWidthPercent(6, 13)
   ftable:setColWidth(7, optionsMenu.table.arrowColumnWidth, false)
 
-  -- The title row carries the master switch, so it has to be interactive. The caption is the
+  -- The title row carries the "..." button, so it has to be interactive. The caption is the
   -- mod's own name (t 1), so the block names itself the way the list below it names extensions.
   local titleRow = ftable:addRow(true, {})
-  createRowText(titleRow[2]:setColSpan(4), T(1), true)
-  createCenteredCheckBox(titleRow[6], esm.Enabled(), { mouseOverText = T(125) })
-  titleRow[6].handlers.onClick = onToggleEnabled
+  createRowText(titleRow[2]:setColSpan(5), T(1), true)
   -- Column 7 is where every extension row keeps its "..." (gameoptions.lua:10467), so the mod's
-  -- own settings are reached the same way. It stays available with the feature off.
+  -- own settings are reached the same way. It stays available with the feature off, where it is
+  -- the only way back to the master switch.
   titleRow[7]:createButton({ mouseOverText = T(130) }):setText("...",
     { fontsize = VANILLA_FONT_SIZE, halign = "center" })
   titleRow[7].handlers.onClick = displaySettings

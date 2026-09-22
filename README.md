@@ -30,11 +30,11 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 
 ### Switching the feature on
 
-Open **Options > Extensions**. The mod's block sits above the extension list, with a checkbox on its title row. Tick it and the block opens up.
+Open **Options > Extensions**. The mod's block sits above the extension list, with a **...** button on its title row. Press it to open the mod's settings page and tick **Enabled** there; press the back arrow and the block has opened up.
 
 The first time it is switched on, the setup you are already running is captured as a set called **Default**, and that set becomes the active one. Nothing about your extensions changes.
 
-While the feature is on, the extension list below is read-only: the Enabled and Disabled buttons are greyed out, and the way to change an extension state is to edit a set. Untick the checkbox and the list is yours again.
+While the feature is on, the extension list below is read-only: the Enabled and Disabled buttons are greyed out, and the way to change an extension state is to edit a set. Untick **Enabled** on the settings page and the list is yours again.
 
 ### Creating a set
 
@@ -72,6 +72,7 @@ The **Default** set cannot be deleted.
 
 The title row of the mod's block carries a **...** button, in the same column where every extension row keeps its own. It opens the mod's settings page, and the back arrow returns to the extension list. The page is reachable whether the feature is switched on or off.
 
+- **Enabled**: the master switch for the whole feature. Off, the mod does nothing at all - no set is applied, no savegames are kept apart, and the extension list below is an ordinary one. Every set, the active-set record and the per-set savegames stay exactly where they are, so switching it back on picks up where it left off.
 - **Debug mode**: how much the mod writes to the game log. **None** is the normal setting and still reports errors; **Debug** adds what the mod does on every action; **Trace** adds every store read and write, every button and every page build. Use the last two only while troubleshooting, then set it back.
 - Under it, for reference: the store the sets are kept in, how many sets are saved, the savegame prefix the active set writes, and whether a restart is already pending.
 
