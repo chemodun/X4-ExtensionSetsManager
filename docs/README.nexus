@@ -34,11 +34,11 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 
 [size=3][u][i]Switching the feature on[/i][/u][/size]
 
-Open [b]Options > Extensions[/b]. The mod's block sits above the extension list, with a checkbox on its title row. Tick it and the block opens up.
+Open [b]Options > Extensions[/b]. The mod's block sits above the extension list, with a [b]...[/b] button on its title row. Press it to open the mod's settings page and tick [b]Enabled[/b] there; press the back arrow and the block has opened up.
 
 The first time it is switched on, the setup you are already running is captured as a set called [b]Default[/b], and that set becomes the active one. Nothing about your extensions changes.
 
-While the feature is on, the extension list below is read-only: the Enabled and Disabled buttons are greyed out, and the way to change an extension state is to edit a set. Untick the checkbox and the list is yours again.
+While the feature is on, the extension list below is read-only: the Enabled and Disabled buttons are greyed out, and the way to change an extension state is to edit a set. Untick [b]Enabled[/b] on the settings page and the list is yours again.
 
 [size=3][u][i]Creating a set[/i][/u][/size]
 
@@ -76,6 +76,7 @@ The [b]Default[/b] set cannot be deleted.
 
 The title row of the mod's block carries a [b]...[/b] button, in the same column where every extension row keeps its own. It opens the mod's settings page, and the back arrow returns to the extension list. The page is reachable whether the feature is switched on or off.
 [list]
+[*] [b]Enabled[/b]: the master switch for the whole feature. Off, the mod does nothing at all - no set is applied, no savegames are kept apart, and the extension list below is an ordinary one. Every set, the active-set record and the per-set savegames stay exactly where they are, so switching it back on picks up where it left off.
 [*] [b]Debug mode[/b]: how much the mod writes to the game log. [b]None[/b] is the normal setting and still reports errors; [b]Debug[/b] adds what the mod does on every action; [b]Trace[/b] adds every store read and write, every button and every page build. Use the last two only while troubleshooting, then set it back.
 [*] Under it, for reference: the store the sets are kept in, how many sets are saved, the savegame prefix the active set writes, and whether a restart is already pending.
 [/list]
