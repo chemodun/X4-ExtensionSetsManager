@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - English text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Save named sets of enabled and disabled extensions and switch between them.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Extension Sets</t>
+      <t id="101">Capture Current Setup</t>
+      <t id="102">Apply Set</t>
+      <t id="103">Rename Set</t>
+      <t id="104">Delete Set</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Set</t>
+      <t id="111">Extensions</t>
+      <t id="112">Active</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Saved Sets</t>
+      <t id="121">Current Setup</t>
+      <t id="122">Individual Saves</t>
+      <t id="123">Shared</t>
+      <t id="124">Extension Set</t>
+      <t id="125">Manage extensions as named sets. While this is on, extension states can only be changed by editing a set.</t>
+      <t id="126">Managed by Extension Sets. Press Edit on a set to change extension states.</t>
+      <t id="127">The Default set shares the common savegames and cannot keep its own.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Active set: %s</t>
+      <t id="1001">None</t>
+      <t id="1002">%s of %s enabled</t>
+      <t id="1003">No sets saved yet. Capture your current setup to create the first one.</t>
+      <t id="1004">Set %s applied. Restart the game for the change to take effect.</t>
+      <t id="1005">Restart required</t>
+      <t id="1006">This manager and the extensions it needs are always kept enabled.</t>
+      <t id="1007">A set named %s already exists.</t>
+      <t id="1008">New set name</t>
+      <t id="1009">Set %s captured from the current setup.</t>
+      <t id="1010">Set %s deleted.</t>
+      <t id="1011">Extension changes are already pending a restart.</t>
+      <t id="1012">Savegames of this set are kept apart, under the id %s.</t>
+      <t id="1013">Delete the set %s? The extensions themselves are not changed.</t>
+      <t id="1014">With this on the set keeps its own savegames, under the id %s; with it off it shares the common ones.</t>
+      <t id="1015">Delete this set's own savegames together with the set.</t>
+      <t id="1016">This set has no savegames of its own.</t>
+      <t id="1017">Delete the set %s and its own savegames? The extensions themselves are not changed.</t>
+      <t id="1018">This set shares the common savegames.</t>
+      <t id="1019">No more sets can be created: set ids stop at %s.</t>
+      <t id="1020">Set %s no longer keeps its own savegames. What should happen to the ones it already has?</t>
+      <t id="1021">Save and delete those savegames</t>
+      <t id="1022">Save and keep those savegames</t>
+      <t id="1023">Return to editing</t>
+      <t id="1024">%s extension(s) differ from the applied set %s. What should happen?</t>
+      <t id="1025">Switch back to %s and leave</t>
+      <t id="1026">Return to the extension list</t>
+      <t id="1027">The set you are editing has not been saved yet. Save or cancel the edit before leaving the extension list.</t>
+
+    </page>
+  </add>
+</diff>

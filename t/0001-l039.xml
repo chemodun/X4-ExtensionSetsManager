@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - Italian text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Salva insiemi con nome di estensioni attivate e disattivate e passa dall'uno all'altro.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Insiemi di estensioni</t>
+      <t id="101">Cattura configurazione attuale</t>
+      <t id="102">Applica insieme</t>
+      <t id="103">Rinomina insieme</t>
+      <t id="104">Elimina insieme</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Insieme</t>
+      <t id="111">Estensioni</t>
+      <t id="112">Attivo</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Insiemi salvati</t>
+      <t id="121">Configurazione attuale</t>
+      <t id="122">Salvataggi individuali</t>
+      <t id="123">Condiviso</t>
+      <t id="124">Insieme di estensioni</t>
+      <t id="125">Gestisci le estensioni come insiemi con nome. Mentre è attivo, lo stato delle estensioni può essere cambiato solo modificando un insieme.</t>
+      <t id="126">Gestito dagli Insiemi di estensioni. Premi Modifica su un insieme per cambiare lo stato delle estensioni.</t>
+      <t id="127">L'insieme predefinito condivide i salvataggi comuni e non può averne di propri.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Insieme attivo: %s</t>
+      <t id="1001">Nessuno</t>
+      <t id="1002">%s di %s attivate</t>
+      <t id="1003">Nessun insieme salvato. Cattura la configurazione attuale per creare il primo.</t>
+      <t id="1004">Insieme %s applicato. Riavvia il gioco perché la modifica abbia effetto.</t>
+      <t id="1005">Riavvio necessario</t>
+      <t id="1006">Questo gestore e le estensioni di cui ha bisogno restano sempre attivi.</t>
+      <t id="1007">Esiste già un insieme chiamato %s.</t>
+      <t id="1008">Nome del nuovo insieme</t>
+      <t id="1009">Insieme %s catturato dalla configurazione attuale.</t>
+      <t id="1010">Insieme %s eliminato.</t>
+      <t id="1011">Ci sono già modifiche alle estensioni in attesa di riavvio.</t>
+      <t id="1012">I salvataggi di questo set sono tenuti a parte, con l'ID %s.</t>
+      <t id="1013">Eliminare l'insieme %s? Le estensioni stesse non vengono modificate.</t>
+      <t id="1014">Attivo, l'insieme mantiene i propri salvataggi, con l'ID %s; disattivo, usa quelli comuni.</t>
+      <t id="1015">Elimina anche i salvataggi propri di questo insieme.</t>
+      <t id="1016">Questo insieme non ha salvataggi propri.</t>
+      <t id="1017">Eliminare l'insieme %s e i suoi salvataggi propri? Le estensioni stesse non vengono modificate.</t>
+      <t id="1018">Questo insieme usa i salvataggi comuni.</t>
+      <t id="1019">Non è possibile creare altri insiemi: gli ID si fermano a %s.</t>
+      <t id="1020">L'insieme %s non mantiene più i propri salvataggi. Cosa fare di quelli che ha già?</t>
+      <t id="1021">Salvare ed eliminare quei salvataggi</t>
+      <t id="1022">Salvare e conservare quei salvataggi</t>
+      <t id="1023">Tornare alla modifica</t>
+      <t id="1024">%s estensioni differiscono dall'insieme applicato %s. Cosa fare?</t>
+      <t id="1025">Tornare a %s e uscire</t>
+      <t id="1026">Tornare all'elenco delle estensioni</t>
+      <t id="1027">L'insieme in modifica non è ancora stato salvato. Salva o annulla la modifica prima di lasciare l'elenco delle estensioni.</t>
+
+    </page>
+  </add>
+</diff>

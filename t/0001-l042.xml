@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - Czech text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Ukládejte pojmenované sady zapnutých a vypnutých rozšíření a přepínejte mezi nimi.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Sady rozšíření</t>
+      <t id="101">Zachytit současné nastavení</t>
+      <t id="102">Použít sadu</t>
+      <t id="103">Přejmenovat sadu</t>
+      <t id="104">Odstranit sadu</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Sada</t>
+      <t id="111">Rozšíření</t>
+      <t id="112">Aktivní</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Uložené sady</t>
+      <t id="121">Současné nastavení</t>
+      <t id="122">Vlastní uložené hry</t>
+      <t id="123">Sdílená</t>
+      <t id="124">Sada rozšíření</t>
+      <t id="125">Spravovat rozšíření jako pojmenované sady. Když je zapnuto, stav rozšíření lze měnit jen úpravou sady.</t>
+      <t id="126">Spravováno Sadami rozšíření. Stiskni Upravit u sady, abys změnil stav rozšíření.</t>
+      <t id="127">Výchozí sada sdílí společné uložené hry a nemůže mít vlastní.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Aktivní sada: %s</t>
+      <t id="1001">Žádná</t>
+      <t id="1002">%s z %s zapnuto</t>
+      <t id="1003">Zatím nejsou uloženy žádné sady. Zachyťte současné nastavení a vytvořte první.</t>
+      <t id="1004">Sada %s použita. Restartujte hru, aby se změna projevila.</t>
+      <t id="1005">Vyžadován restart</t>
+      <t id="1006">Tento správce a rozšíření, která potřebuje, zůstávají vždy zapnutá.</t>
+      <t id="1007">Sada s názvem %s již existuje.</t>
+      <t id="1008">Název nové sady</t>
+      <t id="1009">Sada %s zachycena ze současného nastavení.</t>
+      <t id="1010">Sada %s odstraněna.</t>
+      <t id="1011">Změny rozšíření již čekají na restart.</t>
+      <t id="1012">Uložené hry této sady jsou vedeny zvlášť, pod ID %s.</t>
+      <t id="1013">Smazat sadu %s? Samotná rozšíření se nezmění.</t>
+      <t id="1014">Zapnuto: sada má vlastní uložené hry pod ID %s; vypnuto: používá společné.</t>
+      <t id="1015">Smazat se sadou i její vlastní uložené hry.</t>
+      <t id="1016">Tato sada nemá žádné vlastní uložené hry.</t>
+      <t id="1017">Smazat sadu %s i její vlastní uložené hry? Samotná rozšíření se nezmění.</t>
+      <t id="1018">Tato sada používá společné uložené hry.</t>
+      <t id="1019">Další sady už nelze vytvořit: ID sad končí na %s.</t>
+      <t id="1020">Sada %s již nemá vlastní uložené hry. Co udělat s těmi, které už má?</t>
+      <t id="1021">Uložit a smazat tyto uložené hry</t>
+      <t id="1022">Uložit a ponechat tyto uložené hry</t>
+      <t id="1023">Zpět k úpravám</t>
+      <t id="1024">%s rozšíření se liší od použité sady %s. Co se má stát?</t>
+      <t id="1025">Vrátit se k sadě %s a odejít</t>
+      <t id="1026">Zpět na seznam rozšíření</t>
+      <t id="1027">Upravovaná sada ještě nebyla uložena. Před opuštěním seznamu rozšíření úpravu ulož nebo zruš.</t>
+
+    </page>
+  </add>
+</diff>

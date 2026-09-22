@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - Turkish text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Etkin ve devre dışı eklentilerin adlandırılmış kümelerini kaydedin ve aralarında geçiş yapın.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Eklenti Kümeleri</t>
+      <t id="101">Mevcut Yapılandırmayı Al</t>
+      <t id="102">Kümeyi Uygula</t>
+      <t id="103">Kümeyi Yeniden Adlandır</t>
+      <t id="104">Kümeyi Sil</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Küme</t>
+      <t id="111">Eklentiler</t>
+      <t id="112">Etkin</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Kayıtlı Kümeler</t>
+      <t id="121">Mevcut Yapılandırma</t>
+      <t id="122">Ayrı kayıtlar</t>
+      <t id="123">Ortak</t>
+      <t id="124">Eklenti Kümesi</t>
+      <t id="125">Eklentileri adlandırılmış kümeler olarak yönet. Açıkken eklenti durumları yalnızca bir küme düzenlenerek değiştirilebilir.</t>
+      <t id="126">Eklenti Kümeleri tarafından yönetiliyor. Eklenti durumlarını değiştirmek için bir kümede Düzenle'ye bas.</t>
+      <t id="127">Varsayılan küme ortak kayıtları kullanır ve kendi kayıtlarını tutamaz.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Etkin küme: %s</t>
+      <t id="1001">Yok</t>
+      <t id="1002">%s / %s etkin</t>
+      <t id="1003">Henüz kayıtlı küme yok. İlkini oluşturmak için mevcut yapılandırmanızı alın.</t>
+      <t id="1004">%s kümesi uygulandı. Değişikliğin etkili olması için oyunu yeniden başlatın.</t>
+      <t id="1005">Yeniden başlatma gerekli</t>
+      <t id="1006">Bu yönetici ve çalışması için gereken eklentiler her zaman etkin tutulur.</t>
+      <t id="1007">%s adında bir küme zaten var.</t>
+      <t id="1008">Yeni küme adı</t>
+      <t id="1009">%s kümesi mevcut yapılandırmadan alındı.</t>
+      <t id="1010">%s kümesi silindi.</t>
+      <t id="1011">Eklenti değişiklikleri zaten yeniden başlatma bekliyor.</t>
+      <t id="1012">Bu setin kayıtları %s kimliği altında ayrı tutulur.</t>
+      <t id="1013">%s kümesi silinsin mi? Eklentilerin kendisi değiştirilmez.</t>
+      <t id="1014">Açıkken küme %s kimliğiyle kendi kayıtlarını tutar, kapalıyken ortak kayıtları kullanır.</t>
+      <t id="1015">Kümeyle birlikte kendi kayıtlarını da sil.</t>
+      <t id="1016">Bu kümenin kendine ait kaydı yok.</t>
+      <t id="1017">%s kümesi ve kendi kayıtları silinsin mi? Eklentilerin kendisi değiştirilmez.</t>
+      <t id="1018">Bu küme ortak kayıtları kullanır.</t>
+      <t id="1019">Daha fazla küme oluşturulamaz: küme kimlikleri %s ile sona erer.</t>
+      <t id="1020">%s kümesi artık kendi kayıtlarını tutmuyor. Hâlihazırdaki kayıtlara ne yapılsın?</t>
+      <t id="1021">Kaydet ve bu kayıtları sil</t>
+      <t id="1022">Kaydet ve bu kayıtları koru</t>
+      <t id="1023">Düzenlemeye dön</t>
+      <t id="1024">%s eklenti, uygulanan %s kümesinden farklı. Ne yapılsın?</t>
+      <t id="1025">%s kümesine dön ve çık</t>
+      <t id="1026">Eklenti listesine dön</t>
+      <t id="1027">Düzenlenen küme henüz kaydedilmedi. Eklenti listesinden ayrılmadan önce düzenlemeyi kaydet veya iptal et.</t>
+
+    </page>
+  </add>
+</diff>

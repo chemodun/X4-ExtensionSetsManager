@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - Polish text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Zapisuj nazwane zestawy włączonych i wyłączonych rozszerzeń i przełączaj się między nimi.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Zestawy rozszerzeń</t>
+      <t id="101">Przechwyć bieżącą konfigurację</t>
+      <t id="102">Zastosuj zestaw</t>
+      <t id="103">Zmień nazwę zestawu</t>
+      <t id="104">Usuń zestaw</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Zestaw</t>
+      <t id="111">Rozszerzenia</t>
+      <t id="112">Aktywny</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Zapisane zestawy</t>
+      <t id="121">Bieżąca konfiguracja</t>
+      <t id="122">Osobne zapisy</t>
+      <t id="123">Wspólny</t>
+      <t id="124">Zestaw rozszerzeń</t>
+      <t id="125">Zarządzaj rozszerzeniami jako nazwanymi zestawami. Gdy jest włączone, stan rozszerzeń można zmienić tylko przez edycję zestawu.</t>
+      <t id="126">Zarządzane przez Zestawy rozszerzeń. Naciśnij Edytuj przy zestawie, aby zmienić stan rozszerzeń.</t>
+      <t id="127">Domyślny zestaw korzysta ze wspólnych zapisów i nie może mieć własnych.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Aktywny zestaw: %s</t>
+      <t id="1001">Brak</t>
+      <t id="1002">%s z %s włączonych</t>
+      <t id="1003">Brak zapisanych zestawów. Przechwyć bieżącą konfigurację, aby utworzyć pierwszy.</t>
+      <t id="1004">Zastosowano zestaw %s. Uruchom grę ponownie, aby zmiana zadziałała.</t>
+      <t id="1005">Wymagane ponowne uruchomienie</t>
+      <t id="1006">Ten menedżer i potrzebne mu rozszerzenia pozostają zawsze włączone.</t>
+      <t id="1007">Zestaw o nazwie %s już istnieje.</t>
+      <t id="1008">Nazwa nowego zestawu</t>
+      <t id="1009">Zestaw %s przechwycony z bieżącej konfiguracji.</t>
+      <t id="1010">Zestaw %s usunięty.</t>
+      <t id="1011">Zmiany rozszerzeń już czekają na ponowne uruchomienie.</t>
+      <t id="1012">Zapisy tego zestawu są przechowywane osobno, pod ID %s.</t>
+      <t id="1013">Usunąć zestaw %s? Same rozszerzenia nie zostaną zmienione.</t>
+      <t id="1014">Włączone: zestaw ma własne zapisy pod ID %s; wyłączone: korzysta ze wspólnych.</t>
+      <t id="1015">Usuń razem z zestawem także jego własne zapisy.</t>
+      <t id="1016">Ten zestaw nie ma własnych zapisów.</t>
+      <t id="1017">Usunąć zestaw %s wraz z jego własnymi zapisami? Same rozszerzenia nie zostaną zmienione.</t>
+      <t id="1018">Ten zestaw korzysta ze wspólnych zapisów.</t>
+      <t id="1019">Nie można utworzyć kolejnych zestawów: ID zestawów kończą się na %s.</t>
+      <t id="1020">Zestaw %s nie ma już własnych zapisów. Co zrobić z tymi, które już istnieją?</t>
+      <t id="1021">Zapisz i usuń te zapisy</t>
+      <t id="1022">Zapisz i zachowaj te zapisy</t>
+      <t id="1023">Wróć do edycji</t>
+      <t id="1024">%s rozszerzeń różni się od zastosowanego zestawu %s. Co zrobić?</t>
+      <t id="1025">Wróć do zestawu %s i wyjdź</t>
+      <t id="1026">Wróć do listy rozszerzeń</t>
+      <t id="1027">Edytowany zestaw nie został jeszcze zapisany. Zapisz lub anuluj edycję przed opuszczeniem listy rozszerzeń.</t>
+
+    </page>
+  </add>
+</diff>

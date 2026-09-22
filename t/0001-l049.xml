@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - German text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Speichere benannte Sätze aktivierter und deaktivierter Erweiterungen und wechsle zwischen ihnen.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Erweiterungssätze</t>
+      <t id="101">Aktuelle Konfiguration übernehmen</t>
+      <t id="102">Satz anwenden</t>
+      <t id="103">Satz umbenennen</t>
+      <t id="104">Satz löschen</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Satz</t>
+      <t id="111">Erweiterungen</t>
+      <t id="112">Aktiv</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Gespeicherte Sätze</t>
+      <t id="121">Aktuelle Konfiguration</t>
+      <t id="122">Eigene Spielstände</t>
+      <t id="123">Gemeinsam</t>
+      <t id="124">Erweiterungssatz</t>
+      <t id="125">Erweiterungen als benannte Sätze verwalten. Solange dies aktiv ist, lässt sich der Zustand der Erweiterungen nur durch Bearbeiten eines Satzes ändern.</t>
+      <t id="126">Wird von Erweiterungssätzen verwaltet. Drücke bei einem Satz auf Bearbeiten, um den Zustand der Erweiterungen zu ändern.</t>
+      <t id="127">Der Standardsatz nutzt die gemeinsamen Spielstände und kann keine eigenen haben.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Aktiver Satz: %s</t>
+      <t id="1001">Keiner</t>
+      <t id="1002">%s von %s aktiviert</t>
+      <t id="1003">Noch keine Sätze gespeichert. Übernimm die aktuelle Konfiguration, um den ersten anzulegen.</t>
+      <t id="1004">Satz %s angewendet. Starte das Spiel neu, damit die Änderung wirkt.</t>
+      <t id="1005">Neustart erforderlich</t>
+      <t id="1006">Dieser Manager und die von ihm benötigten Erweiterungen bleiben immer aktiviert.</t>
+      <t id="1007">Ein Satz namens %s existiert bereits.</t>
+      <t id="1008">Name des neuen Satzes</t>
+      <t id="1009">Satz %s aus der aktuellen Konfiguration übernommen.</t>
+      <t id="1010">Satz %s gelöscht.</t>
+      <t id="1011">Erweiterungsänderungen warten bereits auf einen Neustart.</t>
+      <t id="1012">Spielstände dieses Sets werden getrennt gehalten, unter der ID %s.</t>
+      <t id="1013">Satz %s löschen? Die Erweiterungen selbst werden nicht verändert.</t>
+      <t id="1014">Aktiviert behält der Satz eigene Spielstände unter der ID %s, deaktiviert nutzt er die gemeinsamen.</t>
+      <t id="1015">Die eigenen Spielstände dieses Satzes mit dem Satz löschen.</t>
+      <t id="1016">Dieser Satz hat keine eigenen Spielstände.</t>
+      <t id="1017">Satz %s und seine eigenen Spielstände löschen? Die Erweiterungen selbst werden nicht verändert.</t>
+      <t id="1018">Dieser Satz nutzt die gemeinsamen Spielstände.</t>
+      <t id="1019">Es können keine weiteren Sätze erstellt werden: Satz-IDs enden bei %s.</t>
+      <t id="1020">Satz %s behält keine eigenen Spielstände mehr. Was soll mit den vorhandenen geschehen?</t>
+      <t id="1021">Speichern und diese Spielstände löschen</t>
+      <t id="1022">Speichern und diese Spielstände behalten</t>
+      <t id="1023">Zurück zur Bearbeitung</t>
+      <t id="1024">%s Erweiterung(en) weichen vom angewendeten Satz %s ab. Was soll geschehen?</t>
+      <t id="1025">Zurück zu %s wechseln und verlassen</t>
+      <t id="1026">Zurück zur Erweiterungsliste</t>
+      <t id="1027">Der bearbeitete Satz wurde noch nicht gespeichert. Speichere die Bearbeitung oder brich sie ab, bevor du die Erweiterungsliste verlässt.</t>
+
+    </page>
+  </add>
+</diff>

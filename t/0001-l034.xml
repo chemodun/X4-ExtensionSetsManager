@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - Spanish text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Guarda conjuntos con nombre de extensiones activadas y desactivadas y alterna entre ellos.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Conjuntos de extensiones</t>
+      <t id="101">Capturar configuración actual</t>
+      <t id="102">Aplicar conjunto</t>
+      <t id="103">Renombrar conjunto</t>
+      <t id="104">Eliminar conjunto</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Conjunto</t>
+      <t id="111">Extensiones</t>
+      <t id="112">Activo</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Conjuntos guardados</t>
+      <t id="121">Configuración actual</t>
+      <t id="122">Partidas guardadas propias</t>
+      <t id="123">Compartida</t>
+      <t id="124">Conjunto de extensiones</t>
+      <t id="125">Gestiona las extensiones como conjuntos con nombre. Mientras esté activado, el estado de las extensiones solo se puede cambiar editando un conjunto.</t>
+      <t id="126">Gestionado por Conjuntos de extensiones. Pulsa Editar en un conjunto para cambiar el estado de las extensiones.</t>
+      <t id="127">El conjunto predeterminado comparte las partidas guardadas comunes y no puede tener las suyas.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Conjunto activo: %s</t>
+      <t id="1001">Ninguno</t>
+      <t id="1002">%s de %s activadas</t>
+      <t id="1003">Aún no hay conjuntos guardados. Captura tu configuración actual para crear el primero.</t>
+      <t id="1004">Conjunto %s aplicado. Reinicia el juego para que el cambio surta efecto.</t>
+      <t id="1005">Reinicio necesario</t>
+      <t id="1006">Este gestor y las extensiones que necesita se mantienen siempre activados.</t>
+      <t id="1007">Ya existe un conjunto llamado %s.</t>
+      <t id="1008">Nombre del nuevo conjunto</t>
+      <t id="1009">Conjunto %s capturado de la configuración actual.</t>
+      <t id="1010">Conjunto %s eliminado.</t>
+      <t id="1011">Ya hay cambios de extensiones pendientes de reinicio.</t>
+      <t id="1012">Las partidas guardadas de este conjunto se mantienen aparte, con el ID %s.</t>
+      <t id="1013">¿Borrar el conjunto %s? Las extensiones en sí no se modifican.</t>
+      <t id="1014">Activado, el conjunto mantiene sus propias partidas guardadas, con el ID %s; desactivado, usa las comunes.</t>
+      <t id="1015">Borrar también las partidas guardadas propias de este conjunto.</t>
+      <t id="1016">Este conjunto no tiene partidas guardadas propias.</t>
+      <t id="1017">¿Borrar el conjunto %s y sus propias partidas guardadas? Las extensiones en sí no se modifican.</t>
+      <t id="1018">Este conjunto usa las partidas guardadas comunes.</t>
+      <t id="1019">No se pueden crear más conjuntos: los ID de conjunto terminan en %s.</t>
+      <t id="1020">El conjunto %s ya no mantiene sus propias partidas guardadas. ¿Qué hacer con las que ya tiene?</t>
+      <t id="1021">Guardar y eliminar esas partidas guardadas</t>
+      <t id="1022">Guardar y conservar esas partidas guardadas</t>
+      <t id="1023">Volver a la edición</t>
+      <t id="1024">%s extensión(es) difieren del conjunto aplicado %s. ¿Qué hacer?</t>
+      <t id="1025">Volver a %s y salir</t>
+      <t id="1026">Volver a la lista de extensiones</t>
+      <t id="1027">El conjunto que estás editando aún no se ha guardado. Guarda o cancela la modificación antes de salir de la lista de extensiones.</t>
+
+    </page>
+  </add>
+</diff>

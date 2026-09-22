@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - Portuguese text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Salve conjuntos nomeados de extensões ativadas e desativadas e alterne entre eles.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Conjuntos de extensões</t>
+      <t id="101">Capturar configuração atual</t>
+      <t id="102">Aplicar conjunto</t>
+      <t id="103">Renomear conjunto</t>
+      <t id="104">Excluir conjunto</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Conjunto</t>
+      <t id="111">Extensões</t>
+      <t id="112">Ativo</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Conjuntos salvos</t>
+      <t id="121">Configuração atual</t>
+      <t id="122">Jogos salvos próprios</t>
+      <t id="123">Compartilhado</t>
+      <t id="124">Conjunto de extensões</t>
+      <t id="125">Gerir extensões como conjuntos nomeados. Enquanto estiver ativo, o estado das extensões só pode ser alterado ao editar um conjunto.</t>
+      <t id="126">Gerido por Conjuntos de extensões. Carrega em Editar num conjunto para alterar o estado das extensões.</t>
+      <t id="127">O conjunto predefinido partilha os jogos guardados comuns e não pode ter os seus.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Conjunto ativo: %s</t>
+      <t id="1001">Nenhum</t>
+      <t id="1002">%s de %s ativadas</t>
+      <t id="1003">Nenhum conjunto salvo ainda. Capture sua configuração atual para criar o primeiro.</t>
+      <t id="1004">Conjunto %s aplicado. Reinicie o jogo para a mudança ter efeito.</t>
+      <t id="1005">Reinício necessário</t>
+      <t id="1006">Este gerenciador e as extensões de que ele precisa permanecem sempre ativados.</t>
+      <t id="1007">Já existe um conjunto chamado %s.</t>
+      <t id="1008">Nome do novo conjunto</t>
+      <t id="1009">Conjunto %s capturado da configuração atual.</t>
+      <t id="1010">Conjunto %s excluído.</t>
+      <t id="1011">Já há mudanças de extensões aguardando reinício.</t>
+      <t id="1012">Os jogos salvos deste conjunto ficam separados, sob o ID %s.</t>
+      <t id="1013">Apagar o conjunto %s? As extensões em si não são alteradas.</t>
+      <t id="1014">Ativado, o conjunto mantém os seus próprios jogos guardados, sob o ID %s; desativado, usa os comuns.</t>
+      <t id="1015">Apagar também os jogos guardados próprios deste conjunto.</t>
+      <t id="1016">Este conjunto não tem jogos guardados próprios.</t>
+      <t id="1017">Apagar o conjunto %s e os seus jogos guardados próprios? As extensões em si não são alteradas.</t>
+      <t id="1018">Este conjunto usa os jogos guardados comuns.</t>
+      <t id="1019">Não é possível criar mais conjuntos: os ID de conjunto terminam em %s.</t>
+      <t id="1020">O conjunto %s já não mantém os seus próprios jogos guardados. O que fazer aos que já tem?</t>
+      <t id="1021">Guardar e eliminar esses jogos guardados</t>
+      <t id="1022">Guardar e manter esses jogos guardados</t>
+      <t id="1023">Voltar à edição</t>
+      <t id="1024">%s extensão(ões) diferem do conjunto aplicado %s. O que fazer?</t>
+      <t id="1025">Voltar a %s e sair</t>
+      <t id="1026">Voltar à lista de extensões</t>
+      <t id="1027">O conjunto em edição ainda não foi salvo. Salve ou cancele a edição antes de sair da lista de extensões.</t>
+
+    </page>
+  </add>
+</diff>

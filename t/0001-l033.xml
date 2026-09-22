@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Extension Sets Manager - French text, page 1972092441 -->
+<diff>
+  <add sel="/language">
+    <page id="1972092441" title="Extension Sets Manager" descr="" voice="no">
+
+      <!-- mod identity -->
+      <t id="1">Extension Sets Manager</t>
+      <t id="2">Enregistrez des ensembles nommés d'extensions activées et désactivées et basculez entre eux.</t>
+
+      <!-- Page and actions (100) -->
+      <t id="100">Ensembles d'extensions</t>
+      <t id="101">Capturer la configuration actuelle</t>
+      <t id="102">Appliquer l'ensemble</t>
+      <t id="103">Renommer l'ensemble</t>
+      <t id="104">Supprimer l'ensemble</t>
+
+      <!-- Column headers (110) -->
+      <t id="110">Ensemble</t>
+      <t id="111">Extensions</t>
+      <t id="112">Actif</t>
+
+      <!-- Section labels (120) -->
+      <t id="120">Ensembles enregistrés</t>
+      <t id="121">Configuration actuelle</t>
+      <t id="122">Sauvegardes individuelles</t>
+      <t id="123">Partagée</t>
+      <t id="124">Ensemble d'extensions</t>
+      <t id="125">Gérer les extensions sous forme d'ensembles nommés. Tant que cette option est active, l'état des extensions ne peut être modifié qu'en modifiant un ensemble.</t>
+      <t id="126">Géré par les ensembles d'extensions. Appuie sur Modifier pour changer l'état des extensions.</t>
+      <t id="127">L'ensemble par défaut partage les sauvegardes communes et ne peut pas avoir les siennes.</t>
+
+      <!-- Messages (1000) -->
+      <t id="1000">Ensemble actif : %s</t>
+      <t id="1001">Aucun</t>
+      <t id="1002">%s sur %s activées</t>
+      <t id="1003">Aucun ensemble enregistré. Capturez votre configuration actuelle pour créer le premier.</t>
+      <t id="1004">Ensemble %s appliqué. Redémarrez le jeu pour que le changement prenne effet.</t>
+      <t id="1005">Redémarrage requis</t>
+      <t id="1006">Ce gestionnaire et les extensions dont il a besoin restent toujours activés.</t>
+      <t id="1007">Un ensemble nommé %s existe déjà.</t>
+      <t id="1008">Nom du nouvel ensemble</t>
+      <t id="1009">Ensemble %s capturé depuis la configuration actuelle.</t>
+      <t id="1010">Ensemble %s supprimé.</t>
+      <t id="1011">Des modifications d'extensions attendent déjà un redémarrage.</t>
+      <t id="1012">Les sauvegardes de cet ensemble sont conservées à part, sous l'ID %s.</t>
+      <t id="1013">Supprimer l'ensemble %s ? Les extensions elles-mêmes ne sont pas modifiées.</t>
+      <t id="1014">Activé, l'ensemble conserve ses propres sauvegardes, sous l'ID %s ; désactivé, il partage les sauvegardes communes.</t>
+      <t id="1015">Supprimer aussi les sauvegardes propres à cet ensemble.</t>
+      <t id="1016">Cet ensemble n'a aucune sauvegarde qui lui soit propre.</t>
+      <t id="1017">Supprimer l'ensemble %s et ses propres sauvegardes ? Les extensions elles-mêmes ne sont pas modifiées.</t>
+      <t id="1018">Cet ensemble partage les sauvegardes communes.</t>
+      <t id="1019">Aucun nouvel ensemble ne peut être créé : les ID d'ensemble s'arrêtent à %s.</t>
+      <t id="1020">L'ensemble %s ne conserve plus ses propres sauvegardes. Que faire de celles qu'il possède déjà ?</t>
+      <t id="1021">Enregistrer et supprimer ces sauvegardes</t>
+      <t id="1022">Enregistrer et conserver ces sauvegardes</t>
+      <t id="1023">Revenir à la modification</t>
+      <t id="1024">%s extension(s) diffèrent de l'ensemble appliqué %s. Que faire ?</t>
+      <t id="1025">Revenir à %s et quitter</t>
+      <t id="1026">Retourner à la liste des extensions</t>
+      <t id="1027">L'ensemble en cours de modification n'a pas encore été enregistré. Enregistrez ou annulez la modification avant de quitter la liste des extensions.</t>
+
+    </page>
+  </add>
+</diff>
