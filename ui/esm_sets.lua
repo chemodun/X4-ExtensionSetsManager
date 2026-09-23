@@ -14,8 +14,9 @@ local PROTECTED = {
   ["ws_3477279743"]               = true,
   -- Print Extension List, manual and Workshop: this mod's hard content.xml dependency
   ["ws_3770927339"]               = true,
-  -- this mod; add its ws_ id here once the Workshop item exists
+  -- this mod, manual and Workshop
   ["extension_sets_manager"]      = true,
+  ["ws_3806682809"]               = true,
 }
 
 local function basename(path)

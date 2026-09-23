@@ -166,6 +166,11 @@ The title row of the mod's block carries a **...** button, in the same column wh
 
 ## Changelog
 
+### [1.01] - 2026-09-23
+
+- **Fixed**
+  - The manager can no longer be disabled by applying a set. It's recognized by its Steam Workshop ID.
+
 ### [1.00] - 2026-09-23
 
 - **Added**
