@@ -28,7 +28,7 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 [size=3][u][b]Installation[/b][/u][/size]
 [list]
 [*] [b]Steam Workshop[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806682809]Extension Sets Manager[/url]
-[*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/games/x4foundations/mods/2401]Extension Sets Manager[/url]
+[*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/x4foundations/mods/2401]Extension Sets Manager[/url]
 [/list]
 [size=3][u][b]How to use it[/b][/u][/size]
 
@@ -170,6 +170,13 @@ The title row of the mod's block carries a [b]...[/b] button, in the same column
 [/list]
 [size=3][u][b]Changelog[/b][/u][/size]
 
+[size=3][u][i][1.02] - Unreleased[/i][/u][/size]
+[list]
+[*] [b]Fixed[/b]
+[list]
+[*] On an extension the manager itself requires, the [b]...[/b] button is now greyed out along with its Enabled button.
+[/list]
+[/list]
 [size=3][u][i][1.01] - 2026-09-23[/i][/u][/size]
 [list]
 [*] [b]Fixed[/b]
