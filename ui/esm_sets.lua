@@ -9,11 +9,11 @@ local sets = {}
 -- off. Matched against the content.xml id and against the extension folder name, because the
 -- same mod carries a bare id when installed manually and a ws_ id from the Workshop.
 local PROTECTED = {
-  ["extension_sets_manager"]      = true,
-  ["kuertee_ui_extensions"]       = true,
+  -- kuertee UI Extensions, manual and Workshop
   ["kuerteeuiextensionsandhud"]   = true,
-  ["print_extension_list"]        = true,
-  ["ws_3770927339"]               = true,
+  ["ws_3477279743"]               = true,
+  -- this mod; add its ws_ id here once the Workshop item exists
+  ["extension_sets_manager"]      = true,
 }
 
 local function basename(path)
