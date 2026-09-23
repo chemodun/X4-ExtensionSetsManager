@@ -24,7 +24,7 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 ## Installation
 
 - **Steam Workshop**: [Extension Sets Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3806682809)
-- **Nexus Mods**: [Extension Sets Manager](https://www.nexusmods.com/games/x4foundations/mods/2401)
+- **Nexus Mods**: [Extension Sets Manager](https://www.nexusmods.com/x4foundations/mods/2401)
 
 ## How to use it
 
@@ -165,6 +165,11 @@ The title row of the mod's block carries a **...** button, in the same column wh
 - [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659) - for *UI Extensions and HUD*, which this mod builds its page on.
 
 ## Changelog
+
+### [1.02] - Unreleased
+
+- **Fixed**
+  - On an extension the manager itself requires, the **...** button is now greyed out along with its Enabled button.
 
 ### [1.01] - 2026-09-23
 

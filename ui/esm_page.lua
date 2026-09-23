@@ -129,6 +129,10 @@ local function locked()
   return esm.Enabled() and (mode == "select")
 end
 
+local function rowProtected(extension)
+  return esm.Enabled() and (extension ~= nil) and sets.IsProtected(extension)
+end
+
 -- Why a row's toggle is greyed, or nil while it is free. A protected extension is locked in
 -- every mode, edit included: a set can never turn it off, so an editable state there would be
 -- a state the set cannot keep.
@@ -136,7 +140,7 @@ local function rowLockText(extension)
   if not esm.Enabled() then
     return nil
   end
-  if extension and sets.IsProtected(extension) then
+  if rowProtected(extension) then
     return T(128)
   end
   if mode == "select" then
@@ -948,21 +952,28 @@ function page.EnsureHooked()
     return origCleanup(...)
   end
 
-  -- Every extension and DLC row puts its Enabled/Disabled toggle in column 6, and the row the
-  -- builder just added is the table's last one - so the button is greyed there rather than by
-  -- rebuilding the row. Vanilla has one builder; UIX splits the list and sends mods through
-  -- displayModRow, which is why both are wrapped and why a missing one is not an error.
+  -- Every extension and DLC row puts its Enabled/Disabled toggle in column 6 and its "..." in
+  -- column 7, and the row the builder just added is the table's last one - so the buttons are
+  -- greyed there rather than by rebuilding the row. Vanilla has one builder; UIX splits the
+  -- list and sends mods through displayModRow, which is why both are wrapped and why a missing
+  -- one is not an error.
   for _, name in ipairs({ "displayExtensionRow", "displayModRow" }) do
     local original = optionsMenu[name]
     if original then
       optionsMenu[name] = function(ftable, extension, ...)
         local result = original(ftable, extension, ...)
         local tip = rowLockText(extension)
-        if tip and ftable and ftable.rows then
-          local row = ftable.rows[#ftable.rows]
-          if row and row[6] then
+        local row = ftable and ftable.rows and ftable.rows[#ftable.rows]
+        if row then
+          if tip and row[6] then
             row[6].properties.active = false
             row[6].properties.mouseOverText = tip
+          end
+          -- Column 7 opens the single-extension page, whose own Enabled row this mod cannot
+          -- reach; for a protected extension the page is closed off instead.
+          if rowProtected(extension) and row[7] then
+            row[7].properties.active = false
+            row[7].properties.mouseOverText = T(128)
           end
         end
         return result
