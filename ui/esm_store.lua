@@ -130,16 +130,22 @@ local function savedWrite()
   local data = {
     writes  = ((type(existing) == "table") and tonumber(existing.writes) or 0) + 1,
     active  = state.activeId,
-    maxId   = storedMaxId,
     debug   = esm.debugLevel,
     enabled = state.enabled,
     sets    = {},
   }
   for _, set in ipairs(state.sets) do
+    -- Where the bound grows. It is written here rather than at capture time so that every
+    -- persisted id raises it exactly once, and a deleted set's id can never be handed out
+    -- again: the delete leaves the bound where the create put it.
+    if set.id > storedMaxId then
+      storedMaxId = set.id
+    end
     data.sets[set.id] = toObject(set)
     esm.Trace("saved write: set %d (%s), %d extension(s), individual saves %s",
       set.id, tostring(set.name), countIds(set), set.saves and "on" or "off")
   end
+  data.maxId = storedMaxId
   ---@diagnostic disable-next-line: global-in-non-module
   __ESM_STORE = data
   esm.Debug("saved write (%s): writes=%d sets=%d active=%s maxId=%s",
