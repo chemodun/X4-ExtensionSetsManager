@@ -23,8 +23,8 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 
 ## Installation
 
-- **Steam Workshop**: link to be added on publication.
-- **Nexus Mods**: link to be added on publication.
+- **Steam Workshop**: [Extension Sets Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3806682809)
+- **Nexus Mods**: [Extension Sets Manager](https://www.nexusmods.com/games/x4foundations/mods/2401)
 
 ## How to use it
 
@@ -166,7 +166,7 @@ The title row of the mod's block carries a **...** button, in the same column wh
 
 ## Changelog
 
-### [1.00] - 2026-09-??
+### [1.00] - 2026-09-23
 
 - **Added**
   - Initial release.
