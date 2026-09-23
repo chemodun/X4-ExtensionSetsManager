@@ -147,7 +147,7 @@ The title row of the mod's block carries a **...** button, in the same column wh
 ## Limitations
 
 - **A Set only takes effect after a restart.** There is no way to reload extensions in a running X4, so applying a Set always means exiting and starting the game again.
-- **This mod and UI Extensions and HUD are always kept enabled** in every Set, and their buttons stay greyed out even while a Set is being edited. A Set that switched them off could not be switched away from.
+- **This mod and the extensions it requires are always kept enabled** in every Set - *UI Extensions and HUD* and *Print Extension List* - and their buttons stay greyed out even while a Set is being edited. A Set that switched them off could not be switched away from.
 - **Individual savegames cover manual saves only.** Quicksaves, autosaves and online saves are written by the engine under names no script sees, so they stay shared.
 - **A Set's saves are hidden while another Set is active**, in the start menu as well as in game. That is the point of the feature, but it is the first thing that looks like a bug: if a save seems to be missing, check which Set is active.
 - **The per-extension page** reached through the "..." button of an extension row still shows its Enabled row as clickable while the feature is on. The click does nothing; use Edit on a Set to change extension states.
