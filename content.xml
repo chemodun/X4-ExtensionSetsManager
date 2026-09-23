@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <content
-  id="extension_sets_manager"
+  id="ws_3806682809"
   name="Extension Sets Manager"
   author="Chem O`Dun"
   version="100"
-  date="2026-09-21"
+  date="2026-09-23"
   save="false"
   sync="false"
   enabled="true"
