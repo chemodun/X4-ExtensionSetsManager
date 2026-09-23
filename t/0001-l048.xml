@@ -29,6 +29,7 @@
       <t id="125">Zarządzaj rozszerzeniami jako nazwanymi zestawami. Gdy jest włączone, stan rozszerzeń można zmienić tylko przez edycję zestawu.</t>
       <t id="126">Zarządzane przez Zestawy rozszerzeń. Naciśnij Edytuj przy zestawie, aby zmienić stan rozszerzeń.</t>
       <t id="127">Domyślny zestaw korzysta ze wspólnych zapisów i nie może mieć własnych.</t>
+      <t id="128">Wymagane przez Zestawy rozszerzeń. Wyłącz Zestawy rozszerzeń w ich ustawieniach, aby zmienić to rozszerzenie.</t>
 
       <!-- Strona ustawień (130) -->
       <t id="130">Otwórz ustawienia tego rozszerzenia.</t>

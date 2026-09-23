@@ -29,6 +29,7 @@
       <t id="125">Eklentileri adlandırılmış kümeler olarak yönet. Açıkken eklenti durumları yalnızca bir küme düzenlenerek değiştirilebilir.</t>
       <t id="126">Eklenti Kümeleri tarafından yönetiliyor. Eklenti durumlarını değiştirmek için bir kümede Düzenle'ye bas.</t>
       <t id="127">Varsayılan küme ortak kayıtları kullanır ve kendi kayıtlarını tutamaz.</t>
+      <t id="128">Eklenti Kümeleri için gerekli. Bu eklentiyi değiştirmek için ayarlarından Eklenti Kümeleri'ni kapat.</t>
 
       <!-- Ayarlar sayfası (130) -->
       <t id="130">Bu eklentinin ayarlarını aç.</t>

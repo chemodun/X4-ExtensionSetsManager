@@ -29,6 +29,7 @@
       <t id="125">Gerir extensões como conjuntos nomeados. Enquanto estiver ativo, o estado das extensões só pode ser alterado ao editar um conjunto.</t>
       <t id="126">Gerido por Conjuntos de extensões. Carrega em Editar num conjunto para alterar o estado das extensões.</t>
       <t id="127">O conjunto predefinido partilha os jogos guardados comuns e não pode ter os seus.</t>
+      <t id="128">Necessário para os Conjuntos de extensões. Desliga os Conjuntos de extensões nas definições para alterar esta extensão.</t>
 
       <!-- Página de configurações (130) -->
       <t id="130">Abrir as configurações desta extensão.</t>

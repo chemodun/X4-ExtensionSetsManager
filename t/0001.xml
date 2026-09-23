@@ -29,6 +29,7 @@
       <t id="125">Manage extensions as named sets. While this is on, extension states can only be changed by editing a set.</t>
       <t id="126">Managed by Extension Sets. Press Edit on a set to change extension states.</t>
       <t id="127">The Default set shares the common savegames and cannot keep its own.</t>
+      <t id="128">Required by Extension Sets. Switch Extension Sets off in its settings to change this extension.</t>
 
       <!-- Settings page (130) -->
       <t id="130">Open the settings of this extension.</t>

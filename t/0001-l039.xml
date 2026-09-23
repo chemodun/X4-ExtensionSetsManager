@@ -29,6 +29,7 @@
       <t id="125">Gestisci le estensioni come insiemi con nome. Mentre è attivo, lo stato delle estensioni può essere cambiato solo modificando un insieme.</t>
       <t id="126">Gestito dagli Insiemi di estensioni. Premi Modifica su un insieme per cambiare lo stato delle estensioni.</t>
       <t id="127">L'insieme predefinito condivide i salvataggi comuni e non può averne di propri.</t>
+      <t id="128">Richiesto dagli Insiemi di estensioni. Disattiva gli Insiemi di estensioni nelle loro impostazioni per cambiare questa estensione.</t>
 
       <!-- Pagina delle impostazioni (130) -->
       <t id="130">Apri le impostazioni di questa estensione.</t>

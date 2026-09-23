@@ -29,6 +29,7 @@
       <t id="125">Gestiona las extensiones como conjuntos con nombre. Mientras esté activado, el estado de las extensiones solo se puede cambiar editando un conjunto.</t>
       <t id="126">Gestionado por Conjuntos de extensiones. Pulsa Editar en un conjunto para cambiar el estado de las extensiones.</t>
       <t id="127">El conjunto predeterminado comparte las partidas guardadas comunes y no puede tener las suyas.</t>
+      <t id="128">Requerido por Conjuntos de extensiones. Desactiva Conjuntos de extensiones en sus ajustes para cambiar esta extensión.</t>
 
       <!-- Página de ajustes (130) -->
       <t id="130">Abrir los ajustes de esta extensión.</t>
