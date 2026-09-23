@@ -129,6 +129,22 @@ local function locked()
   return esm.Enabled() and (mode == "select")
 end
 
+-- Why a row's toggle is greyed, or nil while it is free. A protected extension is locked in
+-- every mode, edit included: a set can never turn it off, so an editable state there would be
+-- a state the set cannot keep.
+local function rowLockText(extension)
+  if not esm.Enabled() then
+    return nil
+  end
+  if extension and sets.IsProtected(extension) then
+    return T(128)
+  end
+  if mode == "select" then
+    return T(126)
+  end
+  return nil
+end
+
 local function showExtensionsPage()
   if optionsMenu then
     optionsMenu.userQuestion = nil
@@ -939,13 +955,14 @@ function page.EnsureHooked()
   for _, name in ipairs({ "displayExtensionRow", "displayModRow" }) do
     local original = optionsMenu[name]
     if original then
-      optionsMenu[name] = function(ftable, ...)
-        local result = original(ftable, ...)
-        if locked() and ftable and ftable.rows then
+      optionsMenu[name] = function(ftable, extension, ...)
+        local result = original(ftable, extension, ...)
+        local tip = rowLockText(extension)
+        if tip and ftable and ftable.rows then
           local row = ftable.rows[#ftable.rows]
           if row and row[6] then
             row[6].properties.active = false
-            row[6].properties.mouseOverText = T(126)
+            row[6].properties.mouseOverText = tip
           end
         end
         return result
@@ -958,12 +975,18 @@ function page.EnsureHooked()
   -- table this mod cannot see, so that one is stopped at the callback instead.
   if optionsMenu.callbackExtensionSettingEnabled then
     origSettingEnabled = optionsMenu.callbackExtensionSettingEnabled
-    optionsMenu.callbackExtensionSettingEnabled = function(...)
+    optionsMenu.callbackExtensionSettingEnabled = function(overrideextension, ...)
       if locked() then
         esm.Debug("extension toggle blocked: edit a set to change extension states")
         return
       end
-      return origSettingEnabled(...)
+      -- Vanilla's own fallback when the single-extension page calls it with no argument.
+      local extension = overrideextension or optionsMenu.selectedExtension
+      if esm.Enabled() and extension and sets.IsProtected(extension) then
+        esm.Debug("extension toggle blocked: %s is required by the manager", tostring(extension.id))
+        return
+      end
+      return origSettingEnabled(overrideextension, ...)
     end
   end
 
