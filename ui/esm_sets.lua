@@ -12,6 +12,8 @@ local PROTECTED = {
   -- kuertee UI Extensions, manual and Workshop
   ["kuerteeuiextensionsandhud"]   = true,
   ["ws_3477279743"]               = true,
+  -- Print Extension List, manual and Workshop: this mod's hard content.xml dependency
+  ["ws_3770927339"]               = true,
   -- this mod; add its ws_ id here once the Workshop item exists
   ["extension_sets_manager"]      = true,
 }
