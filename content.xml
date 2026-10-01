@@ -3,12 +3,12 @@
   id="ws_3806682809"
   name="Extension Sets Manager"
   author="Chem O`Dun"
-  version="102"
+  version="103"
   date="2026-10-01"
   save="false"
   sync="false"
   enabled="true"
-  lastupdate="1790850721"
+  lastupdate="1790853220"
   description="Save named sets of enabled and disabled extensions and switch between them from the Settings menu. Applying a set takes effect after a game restart.">
   <text language="7"
     description="Save named sets of enabled and disabled extensions and switch between them from the Settings menu. Applying a set takes effect after a game restart."></text>
@@ -58,6 +58,5 @@
   <text language="380"
     description="Зберігайте іменовані набори увімкнених і вимкнених розширень та перемикайтеся між ними з меню Налаштування. Застосування набору набуває чинності після перезапуску гри."></text>
   <dependency version="800"></dependency>
-  <dependency id="kuerteeUIExtensionsAndHUD" optional="false" name="kuertee UI Extensions and HUD"></dependency>
   <dependency id="ws_3770927339" optional="false" name="Print Extension List" version="100"></dependency>
 </content>
