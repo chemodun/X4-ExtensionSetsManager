@@ -15,8 +15,6 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 ## Requirements
 
 - **X4: Foundations**: version **8.00** or higher.
-- **UI Extensions and HUD** by [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659): version **v8.0.4.x** or higher on game 8.00, version **v9.0.0.4** or higher on game 9.00.
-  - Available on Nexus Mods: [UI Extensions and HUD](https://www.nexusmods.com/x4foundations/mods/552)
 - **Print Extension List**: version **1.00** or higher by [Chem O`Dun](https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659):
   - Available on Steam Workshop: [Print Extension List](https://steamcommunity.com/sharedfiles/filedetails/?id=3770927339)
   - Available on Nexus Mods: [Print Extension List](https://www.nexusmods.com/x4foundations/mods/2191)
@@ -147,7 +145,8 @@ The title row of the mod's block carries a **...** button, in the same column wh
 ## Limitations
 
 - **A Set only takes effect after a restart.** There is no way to reload extensions in a running X4, so applying a Set always means exiting and starting the game again.
-- **This mod and the extensions it requires are always kept enabled** in every Set - *UI Extensions and HUD* and *Print Extension List* - and their buttons stay greyed out even while a Set is being edited. A Set that switched them off could not be switched away from.
+- **This mod and the extension it requires are always kept enabled** in every Set - *Print Extension List* - and their buttons stay greyed out even while a Set is being edited. A Set that switched them off could not be switched away from.
+- **Warning: without *UI Extensions and HUD* only 10 save slots are visible.** It raises the game's 10 manual save slots to 20, and this mod follows whichever count is in place. If you remove it, or switch it off in a Set, every save in slots 11-20 - shared ones and each Set's own - disappears from the Load and Save pages. The files are not deleted and show up again once it is back.
 - **Individual savegames cover manual saves only.** Quicksaves, autosaves and online saves are written by the engine under names no script sees, so they stay shared.
 - **A Set's saves are hidden while another Set is active**, in the start menu as well as in game. That is the point of the feature, but it is the first thing that looks like a bug: if a save seems to be missing, check which Set is active.
 - **One package covers both game versions.** The mod patches the options menu at runtime rather than replacing any game file, so 8.00 and 9.00 are served by the same build.
@@ -161,9 +160,14 @@ The title row of the mod's block carries a **...** button, in the same column wh
 ## Acknowledgements
 
 - [EGOSOFT](https://www.egosoft.com) - for the X series.
-- [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659) - for *UI Extensions and HUD*, which this mod builds its page on.
+- [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659) - for *UI Extensions and HUD*, whose 20 save slots this mod supports.
 
 ## Changelog
+
+### [1.03] - 2026-10-01
+
+- **Changed**
+  - *UI Extensions and HUD* is no longer required: the mod works with or without it, and a Set can now switch it off. Without it the game has 10 manual save slots instead of 20, so saves in slots 11-20 stay hidden until it is back.
 
 ### [1.02] - 2026-10-01
 

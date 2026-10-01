@@ -9,9 +9,6 @@ local sets = {}
 -- off. Matched against the content.xml id and against the extension folder name, because the
 -- same mod carries a bare id when installed manually and a ws_ id from the Workshop.
 local PROTECTED = {
-  -- kuertee UI Extensions, manual and Workshop
-  ["kuerteeuiextensionsandhud"]   = true,
-  ["ws_3477279743"]               = true,
   -- Print Extension List, manual and Workshop: this mod's hard content.xml dependency
   ["ws_3770927339"]               = true,
   -- this mod, manual and Workshop
