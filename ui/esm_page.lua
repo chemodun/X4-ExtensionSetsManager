@@ -963,17 +963,15 @@ function page.EnsureHooked()
       optionsMenu[name] = function(ftable, extension, ...)
         local result = original(ftable, extension, ...)
         local tip = rowLockText(extension)
-        local row = ftable and ftable.rows and ftable.rows[#ftable.rows]
+        local row = tip and ftable and ftable.rows and ftable.rows[#ftable.rows]
         if row then
-          if tip and row[6] then
-            row[6].properties.active = false
-            row[6].properties.mouseOverText = tip
-          end
           -- Column 7 opens the single-extension page, whose own Enabled row this mod cannot
-          -- reach; for a protected extension the page is closed off instead.
-          if rowProtected(extension) and row[7] then
-            row[7].properties.active = false
-            row[7].properties.mouseOverText = T(128)
+          -- reach, so the page is closed off whenever the toggle is.
+          for _, col in ipairs({ 6, 7 }) do
+            if row[col] then
+              row[col].properties.active = false
+              row[col].properties.mouseOverText = tip
+            end
           end
         end
         return result

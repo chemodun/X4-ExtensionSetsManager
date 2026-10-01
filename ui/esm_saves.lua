@@ -27,9 +27,6 @@ local esm = ESM_Loader.Require("extensions.extension_sets_manager.ui.esm_store")
 
 local saves = {}
 
--- Vanilla's manual save slots (helper.lua, Helper.validSaveFilenames).
-local SLOTS = 10
-
 -- gameoptions' own config.standardTextHeight, which no mod can reach: a savegame row's
 -- second line sits at it and a two-line row is twice it plus a border.
 local TEXT_HEIGHT = 19
@@ -120,8 +117,11 @@ local function widenFilter(filter, prefix)
       wide[name] = true
     end
   end
-  for i = 1, SLOTS do
-    wide[string.format("%ssave_%03d", prefix, i)] = true
+  -- Slots are read off the whitelist, never counted: UIX raises vanilla's 10 to 20.
+  for name in pairs(Helper.validSaveFilenames) do
+    if isSlotName(name) then
+      wide[prefix .. name] = true
+    end
   end
   return wide
 end
@@ -159,7 +159,7 @@ end
 
 -- Does this set already hold savegames of its own? Only the individual-saves flag writes under
 -- a set's prefix, so this separates a set that once kept its own from one that never did. The
--- filter is a whitelist, so the ten slot names are the whole search space.
+-- filter is a whitelist, so the slot names are the whole search space.
 function saves.HasOwnSaves(setId)
   if (setId == nil) or (origGetSaveList == nil) then
     return false

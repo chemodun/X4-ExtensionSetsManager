@@ -150,7 +150,6 @@ The title row of the mod's block carries a **...** button, in the same column wh
 - **This mod and the extensions it requires are always kept enabled** in every Set - *UI Extensions and HUD* and *Print Extension List* - and their buttons stay greyed out even while a Set is being edited. A Set that switched them off could not be switched away from.
 - **Individual savegames cover manual saves only.** Quicksaves, autosaves and online saves are written by the engine under names no script sees, so they stay shared.
 - **A Set's saves are hidden while another Set is active**, in the start menu as well as in game. That is the point of the feature, but it is the first thing that looks like a bug: if a save seems to be missing, check which Set is active.
-- **The per-extension page** reached through the "..." button of an extension row still shows its Enabled row as clickable while the feature is on. The click does nothing; use Edit on a Set to change extension states.
 - **One package covers both game versions.** The mod patches the options menu at runtime rather than replacing any game file, so 8.00 and 9.00 are served by the same build.
 - **Set ids stop at 99999.** An id is never reused, so that is also the total number of Sets that can ever be created in one installation.
 
@@ -166,10 +165,11 @@ The title row of the mod's block carries a **...** button, in the same column wh
 
 ## Changelog
 
-### [1.02] - Unreleased
+### [1.02] - 2026-10-01
 
 - **Fixed**
-  - On an extension the manager itself requires, the **...** button is now greyed out along with its Enabled button.
+  - An extension row's **...** button is now greyed out whenever its Enabled button is: on every row outside edit mode, and on the extensions the manager itself requires in edit mode.
+  - A set with its own saves now lists save slots 11-20 too. *UI Extensions and HUD* raises the game's 10 manual slots to 20, and saves in slots 11-20 were hidden from the Load and Save pages.
 
 ### [1.01] - 2026-09-23
 
