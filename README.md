@@ -24,6 +24,10 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 - **Steam Workshop**: [Extension Sets Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=3806682809)
 - **Nexus Mods**: [Extension Sets Manager](https://www.nexusmods.com/x4foundations/mods/2401)
 
+## Save state
+
+**No** (removing the extension does not break saves).
+
 ## How to use it
 
 ### Switching the feature on
@@ -163,6 +167,11 @@ The title row of the mod's block carries a **...** button, in the same column wh
 - [kuertee](https://next.nexusmods.com/profile/kuertee?gameId=2659) - for *UI Extensions and HUD*, whose 20 save slots this mod supports.
 
 ## Changelog
+
+### [1.04] - 2026-10-20
+
+- **Fixed**
+  - The description panel beside the extension list stayed empty.
 
 ### [1.03] - 2026-10-01
 

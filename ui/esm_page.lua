@@ -22,6 +22,7 @@ local origCleanup
 local origOnCloseElement
 local origExtensionDefaults
 local origSettingEnabled
+local origViewCreated
 
 -- Disarms the exit guard for the one exit the player has just agreed to, so the re-issued
 -- navigation runs through the ordinary leave path instead of asking a second time.
@@ -35,6 +36,9 @@ local preview
 -- Armed only for the duration of one displayExtensions call.
 local injecting = false
 local injected = false
+-- The frame layer and table index of the mod's table, kept out of vanilla's viewCreated.
+---@type { layer: integer, index: integer }?
+local setTable
 
 -- "select" shows the dropdown; "create" and "edit" swap in an edit box. Picking a name in
 -- the dropdown writes that set's extension states straight away, so the vanilla list below
@@ -694,6 +698,7 @@ local function buildSetTable(frame, properties)
     width = properties.width,
     skipTabChange = true,
   })
+  setTable = { layer = frame.properties.layer, index = ftable.index }
   ftable:setColWidth(1, optionsMenu.table.arrowColumnWidth, false)
   ftable:setColWidthPercent(2, 40)
   -- Column 4 is one checkbox wide plus a border either side, so the edit row's flag sits in it
@@ -860,6 +865,7 @@ local function onDisplayExtensions(...)
 
   injecting = true
   injected = false
+  setTable = nil
 
   local ok, err = pcall(origDisplayExtensions, ...)
 
@@ -888,6 +894,7 @@ function page.EnsureHooked()
   origCleanup = optionsMenu.cleanup
   origOnCloseElement = optionsMenu.onCloseElement
   origExtensionDefaults = optionsMenu.callbackExtensionDefaults
+  origViewCreated = optionsMenu.viewCreated
 
   optionsMenu.displayExtensions = onDisplayExtensions
   optionsMenu.createOptionsFrame = function(...)
@@ -896,6 +903,21 @@ function page.EnsureHooked()
       return wrapFrame(frame)
     end
     return frame
+  end
+
+  -- Vanilla takes this page's tables positionally as title, option, info (gameoptions.lua:13081);
+  -- left in, the mod's table becomes optionTable and the description panel never fills.
+  if origViewCreated then
+    optionsMenu.viewCreated = function(layer, ...)
+      local onPage = setTable and (layer == setTable.layer) and (optionsMenu.currentOption == "extensions")
+      if onPage and (select("#", ...) > 3) then
+        local children = table.pack(...)
+        table.remove(children, setTable.index)
+        esm.Trace("viewCreated: mod table %d left out of %d", setTable.index, children.n)
+        return origViewCreated(layer, table.unpack(children, 1, children.n - 1))
+      end
+      return origViewCreated(layer, ...)
+    end
   end
 
   -- The back arrow and Escape both funnel through onCloseElement, and it runs before vanilla
@@ -1009,7 +1031,7 @@ function page.EnsureHooked()
   end
 
   hooked = true
-  esm.Debug("EnsureHooked: patched displayExtensions, createOptionsFrame, submenuHandler, cleanup, onCloseElement and the extension toggle")
+  esm.Debug("EnsureHooked: patched displayExtensions, createOptionsFrame, viewCreated, submenuHandler, cleanup, onCloseElement and the extension toggle")
 end
 
 local function init()
