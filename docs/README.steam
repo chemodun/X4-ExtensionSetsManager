@@ -26,6 +26,10 @@ The whole feature is off on a fresh install. Nothing changes until you switch it
 [*] [b]Steam Workshop[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806682809]Extension Sets Manager[/url]
 [*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/x4foundations/mods/2401]Extension Sets Manager[/url]
 [/list]
+[h2][b]Save state[/b][/h2]
+
+[b]No[/b] (removing the extension does not break saves).
+
 [h2][b]How to use it[/b][/h2]
 
 [h2]Switching the feature on[/h2]
@@ -166,6 +170,13 @@ The title row of the mod's block carries a [b]...[/b] button, in the same column
 [/list]
 [h2][b]Changelog[/b][/h2]
 
+[h2][1.04] - 2026-10-20[/h2]
+[list]
+[*] [b]Fixed[/b]
+[list]
+[*] The description panel beside the extension list stayed empty.
+[/list]
+[/list]
 [h2][1.03] - 2026-10-01[/h2]
 [list]
 [*] [b]Changed[/b]
